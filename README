@@ -1,0 +1,43 @@
+NAME
+    Net-ppputil-xs - PPP device encode and decode
+VERSION
+    This document describes Net-ppputil-xs 0.18 released on 2014-01-29
+
+SYNOPSIS
+		use Net-ppputil-xs;
+		my $ss=pack("H*",'ff03c021010100190206000000000305c223810506cf265db007020802');
+		my $ww=pack("H*",'ff7d23c0217d217d217d207d397d227d267d207d207d207d207d237d25c223817d257d26cf265db07d277d227d287d223030');
+
+		warn unpack("H*",Net::ppputil::xs::encode_ppp($ss)); ## add fcs value
+		warn unpack("H*",Net::ppputil::xs::decode_ppp($ww)); ## delete fcs value
+
+DESCRIPTION
+    
+
+
+AUTHOR
+    
+    openervpn "<a at openervpn.us>"
+
+License
+    The "MIT" License
+
+    Permission is hereby granted, free of charge, to any person obtaining a
+    copy of this software and associated documentation files (the
+    "Software"), to deal in the Software without restriction, including
+    without limitation the rights to use, copy, modify, merge, publish,
+    distribute, sublicense, and/or sell copies of the Software, and to
+    permit persons to whom the Software is furnished to do so, subject to
+    the following conditions:
+
+    The above copyright notice and this permission notice shall be included
+    in all copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+    OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+    MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+    IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+    CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+    TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+    SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
